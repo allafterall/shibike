@@ -9,22 +9,17 @@ const { class: className, ...props } = Astro.props;
 <nav class:list={[className]} {...props}>
   <ul class="flex justify-center md:justify-start space-x-4 md:space-x-6">
     <li>
-      <a href="/course/#about" class="hover:text-gray-600 transition-colors"
-        >О курсе</a
+      <a href="/#about" class="hover:text-gray-600 transition-colors"
+        >About me</a
       >
     </li>
     <li>
-      <a href="/course/#schedule" class="hover:text-gray-600 transition-colors"
-        >Программа</a
+      <a href="/#services" class="hover:text-gray-600 transition-colors"
+        >Services</a
       >
     </li>
     <li>
-      <a href="/course/#pricing" class="hover:text-gray-600 transition-colors"
-        >Стоимость</a
-      >
-    </li>
-    <li>
-      <a href="/course/#faq" class="hover:text-gray-600 transition-colors"
+      <a href="/#faq" class="hover:text-gray-600 transition-colors"
         >FAQ</a
       >
     </li>
