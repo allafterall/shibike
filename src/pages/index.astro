@@ -2,7 +2,6 @@
 import About from "../components/course/About/About.astro";
 import CourseScheduleBlock from "../components/course/CourseScheduleBlock.astro";
 import FAQ from "../components/course/FAQ.astro";
-import FeaturesRow from "../components/course/FeaturesRow.astro";
 import Heading from "../components/course/Heading.astro";
 import Hero from "../components/course/Hero.astro";
 import Icon from "../components/course/Icon/Icon.astro";
@@ -10,7 +9,6 @@ import List from "../components/course/List.astro";
 import Book from "../components/course/Book.astro";
 import Section from "../components/course/Section.astro";
 import Toolbar from "../components/course/Toolbar.astro";
-import TwoColumnBlock from "../components/course/TwoColumnBlock.astro";
 import CourseLayout from "../layouts/Course.astro";
 import basicServicing from "./course/_images/basic_servicing.png";
 import replaceTube from "./course/_images/replace_tube.png";
@@ -135,13 +133,16 @@ import servicingImage from "./course/_images/bike_servicing.jpg";
             question: "How can I contact you?",
             answer: "Feel free to drop me a message to allafterall@gmail.com",
           },
+          {
+            question: "What does ShiBike mean?",
+            answer: "The name is inspired by a Shiba Inu called Satomi who is a very sweet girl always keen to travel in a bike trailer",
+          },
         ]}
       />
     </Section>
     <Section id="author" type="narrow" class="md:pt-16">
       <About>
-        The name "ShiBike" is inspired by a Shiba Inu called Satomi who is
-        a very sweet girl always keen to travel in a bike trailer.     
+        Official visit of Her Exellency Satomi to Hampstead Heath.     
       </About>
     </Section>
   </main>
