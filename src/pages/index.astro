@@ -39,24 +39,16 @@ import servicingImage from "./course/_images/bike_servicing.jpg";
         imageAlt="Mobile Bike Servicing"
       >
         <p>
-          Привет, меня зовут Аня Шмитько. Я фотографка и режиссерка
-          документального кино. Много лет я снимаю для медиа, социальных
-          проектов, театра и кино. Последние десять лет я делаю это на телефон.
+          Hi, my name is Andrey. I used to work as a software engineer, but over time I realized I get much more satisfaction from working with real, tangible things. 
         </p>
         <p>
-          Он всегда рядом со мной. Он не пугает окружающих. Он прост в съёмке.
-        </p>
+          As a passionate cyclist, bike servicing turned out to be the perfect fit. I love the process of bringing bikes back to their best.</p>
         <p>
-          Это настолько классно, что я сделала курс о том, как снимать на
-          телефон.
-        </p>
-        <p>
-          5 недель. Онлайн-группа 10-12 человек. Теория (немного), практика
-          (много), обсуждения и финальный проект.
+          It’s incredibly rewarding for me to see how much of a difference a well-tuned bike can make to someone's ride.
         </p>
       </Hero>
     </Section>
-    <Section id="about">
+    <Section id="services">
       <FeaturesRow
         title="Это курс про"
         features={[
@@ -95,120 +87,6 @@ import servicingImage from "./course/_images/bike_servicing.jpg";
         </p>
         <p>Домашние задания с проверкой — будут.</p>
       </TwoColumnBlock>
-    </Section>
-    <Section class="my-24" id="services">
-      <div class="flex items-center gap-3 md:gap-6 mb-12">
-        <Icon icon="schedule" />
-        <Heading level="h2"> Программа курса </Heading>
-      </div>
-      <div class="flex flex-col gap-24">
-        <CourseScheduleBlock
-          num="1"
-          title="Введение в мобильную фотографию"
-          date="17 мая, 11:00 CET (12:00 MSK)"
-          image={ep01}
-        >
-          <List
-            items={[
-              "Как работает камера телефона: свет, выдержка, диафрагма",
-              "Портрет: типы, ракурсы",
-              "Практика: автопортрет, знакомство с программами",
-            ]}
-            slot="content"
-          />
-          <p slot="footer">
-            <span class="font-bold">Домашнее задание:</span>
-            <br />
-            3 портрета — домашний, рабочий, уличный
-          </p>
-        </CourseScheduleBlock>
-
-        <CourseScheduleBlock
-          num="2"
-          title="Контекст, деталь и позиция"
-          date="24 мая, 11:00 CET (12:00 MSK)"
-          image={ep02}
-          align="reverse"
-        >
-          <List
-            items={[
-              "Фотограф как наблюдатель и участник",
-              "Работа с пространством и деталями, портрет без героя",
-              "Практика: портрет комнаты",
-              "Практика обработки (кадрирование, перспектива)",
-            ]}
-            slot="content"
-          />
-          <p slot="footer">
-            <span class="font-bold">Домашнее задание:</span>
-            <br />
-            Портрет пространства — квартиры или дома
-          </p>
-        </CourseScheduleBlock>
-
-        <CourseScheduleBlock
-          num="3"
-          title="Этика и репортаж"
-          date="31 мая, 11:00 CET (12:00 MSK)"
-          image={ep03}
-        >
-          <List
-            items={[
-              "Границы и согласия, правовые аспекты",
-              "Виды репортажа",
-              "Практика: обработка (hsl, кривые, зерно), разбор ситуаций",
-            ]}
-            slot="content"
-          />
-          <p slot="footer">
-            <span class="font-bold">Домашнее задание:</span>
-            <br />
-            Репортаж одного дня из собственной жизни
-          </p>
-        </CourseScheduleBlock>
-
-        <CourseScheduleBlock
-          num="4"
-          title="От фотографии к фотоистории"
-          date="07 июня, 11:00 CET (12:00 MSK)"
-          image={ep04}
-          align="reverse"
-        >
-          <List
-            items={[
-              "Проектное мышление: от идеи до серии",
-              "Сценарий съемки, структура истории",
-              "Практика: разработка темы и питчинг финального проекта",
-              "Семинар: обработка (общее цветовое решение, публикация)",
-            ]}
-            slot="content"
-          />
-          <p slot="footer">
-            <span class="font-bold">Домашнее задание:</span>
-            <br />
-            Фотоистория из 5–10 кадров
-          </p>
-        </CourseScheduleBlock>
-
-        <CourseScheduleBlock
-          num="5"
-          title="Портфолио-ревю"
-          date="14 июня, 11:00 CET (12:00 MSK)"
-          image={ep05}
-        >
-          <List
-            items={[
-              "Групповая презентация проектов",
-              "Обсуждение с приглашенными экспертами",
-              "Финальный разбор и обратная связь",
-            ]}
-            slot="content"
-          />
-          <p slot="footer">
-            <span class="font-bold">Финальное занятие</span>
-          </p>
-        </CourseScheduleBlock>
-      </div>
     </Section>
     <Section class="flex flex-col gap-24" id="pricing" type="narrow">
       <Pricing
