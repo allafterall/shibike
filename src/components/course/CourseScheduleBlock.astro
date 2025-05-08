@@ -5,17 +5,13 @@ import Heading from "./Heading.astro";
 import TwoColumns from "./TwoColumns.astro";
 
 interface Props extends HTMLAttributes<"div"> {
-  num: string;
   title: string;
-  price: string;
   image: ImageMetadata;
   align?: "default" | "reverse";
 }
 
 const {
-  num,
   title,
-  price,
   image,
   align = "default",
   class: className,
@@ -32,11 +28,7 @@ const {
       <div
         class="flex items-center gap-2 md:gap-4 md:text-xl font-serif italic font-[100]"
       >
-        <div>
-          {num}.
-        </div>
         <div class="h-px bg-stone-300 flex-grow mx-2"></div>
-        <div>{price}</div>
       </div>
       <div class="flex flex-col gap-4">
         <Heading level="h3">{title}</Heading>
