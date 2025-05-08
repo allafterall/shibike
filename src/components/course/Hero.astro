@@ -10,7 +10,6 @@ interface Props {
   imageAlt: string;
   authorName?: string;
   authorDescription?: string;
-  startDate?: string;
 }
 
 const {
@@ -18,7 +17,6 @@ const {
   subtitle,
   image,
   imageAlt,
-  startDate,
 } = Astro.props;
 ---
 
@@ -40,7 +38,6 @@ const {
       <div class="flex flex-col gap-3">
         <slot />
       </div>
-      <div class="font-semibold">{startDate}</div>
     </div>
 
     <div class="mt-6 flex justify-center">
