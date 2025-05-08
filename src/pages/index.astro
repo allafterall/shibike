@@ -7,7 +7,7 @@ import Heading from "../components/course/Heading.astro";
 import Hero from "../components/course/Hero.astro";
 import Icon from "../components/course/Icon/Icon.astro";
 import List from "../components/course/List.astro";
-import Pricing from "../components/course/Pricing.astro";
+import Book from "../components/course/Book.astro";
 import Section from "../components/course/Section.astro";
 import Toolbar from "../components/course/Toolbar.astro";
 import TwoColumnBlock from "../components/course/TwoColumnBlock.astro";
@@ -88,8 +88,9 @@ import servicingImage from "./course/_images/bike_servicing.jpg";
         <p>Домашние задания с проверкой — будут.</p>
       </TwoColumnBlock>
     </Section>
+    
     <Section class="flex flex-col gap-24" id="pricing" type="narrow">
-      <Pricing
+      <Book
         price="220 евро — Cтоимость курса"
         buttonText="Book a service"
       >
@@ -102,16 +103,7 @@ import servicingImage from "./course/_images/bike_servicing.jpg";
           ]}
           slot="content"
         />
-        <p class="" slot="footer">
-          Хотите купить курс для редакции или бизнеса? Напишите на
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="mailto:annashmitko@gmail.com"
-            class="underline">annashmitko@gmail.com</a
-          >
-        </p>
-      </Pricing>
+      </Book>
     </Section>
     <Section id="faq" type="narrow">
       <FAQ
