@@ -7,7 +7,7 @@ import TwoColumns from "./TwoColumns.astro";
 interface Props extends HTMLAttributes<"div"> {
   num: string;
   title: string;
-  date: string;
+  price: string;
   image: ImageMetadata;
   align?: "default" | "reverse";
 }
@@ -15,7 +15,7 @@ interface Props extends HTMLAttributes<"div"> {
 const {
   num,
   title,
-  date,
+  price,
   image,
   align = "default",
   class: className,
@@ -36,7 +36,7 @@ const {
           {num}.
         </div>
         <div class="h-px bg-stone-300 flex-grow mx-2"></div>
-        <div>{date}</div>
+        <div>{price}</div>
       </div>
       <div class="flex flex-col gap-4">
         <Heading level="h3">{title}</Heading>

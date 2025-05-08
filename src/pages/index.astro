@@ -12,11 +12,10 @@ import Section from "../components/course/Section.astro";
 import Toolbar from "../components/course/Toolbar.astro";
 import TwoColumnBlock from "../components/course/TwoColumnBlock.astro";
 import CourseLayout from "../layouts/Course.astro";
-import ep01 from "./course/_images/ep01.jpg";
-import ep02 from "./course/_images/ep02.jpg";
-import ep03 from "./course/_images/ep03.jpg";
-import ep04 from "./course/_images/ep04.jpg";
-import ep05 from "./course/_images/ep05.jpg";
+import basicServicing from "./course/_images/basic_servicing.png";
+import replaceTube from "./course/_images/replace_tube.png";
+import smallFixes from "./course/_images/small_fixes.png";
+import theftProofing from "./course/_images/theft_proofing.png";
 import servicingImage from "./course/_images/bike_servicing.jpg";
 ---
 
@@ -40,70 +39,88 @@ import servicingImage from "./course/_images/bike_servicing.jpg";
       >
         <p>
           Hi, my name is Andrey. I used to work as a software engineer, but over time I realized I get much more satisfaction from working with real, tangible things. 
-        </p>
-        <p>
           As a passionate cyclist, bike servicing turned out to be the perfect fit. I love the process of bringing bikes back to their best.</p>
         <p>
           It’s incredibly rewarding for me to see how much of a difference a well-tuned bike can make to someone's ride.
         </p>
       </Hero>
     </Section>
-    <Section id="services">
-      <FeaturesRow
-        title="Это курс про"
-        features={[
-          "Практику наблюдения",
-          "Красоту повседневности",
-          "Простые инструменты",
-          "Хранение воспоминаний",
-        ]}
-      />
-      <FeaturesRow
-        title="Для кого этот курс"
-        features={[
-          "Для тех, кто любит снимать",
-          "Тех, кто занимается соцсетями компании",
-          "Для владельцев бизнеса, требующего постоянных фотографий",
-          "Для жадных глазами",
-        ]}
-      />
-      <FeaturesRow
-        title="Кому курс не подойдет"
-        features={[
-          "Тем, кто хочет больше знать об истории фотографии",
-          "Снимает на камеру и хочет улучшить навык работы с ней",
-          "Любит технические данные фото больше, чем его содержание",
-        ]}
-      />
 
-      <TwoColumnBlock title="Как всё пройдёт">
-        <p>
-          Мы будем встречаться раз в неделю, по субботам, в первой половине дня
-          по европейскому времени.
-        </p>
-        <p>
-          Это онлайн-встречи на 2 — 2,5 часа. В начале каждой мы немного
-          поговорим о теории, а большую часть посвятим практике.
-        </p>
-        <p>Домашние задания с проверкой — будут.</p>
-      </TwoColumnBlock>
+    <Section class="my-24" id="services">
+      <div class="flex items-center gap-3 md:gap-6 mb-12">
+        <Icon icon="schedule" />
+        <Heading level="h2"> What I offer </Heading>
+      </div>
+      <div class="flex flex-col gap-24">
+        <CourseScheduleBlock
+          num="1"
+          title="Basic servicing"
+          price="50 gbp"
+          image={basicServicing}
+        >
+          <List
+            items={[
+              "Chain cleaning and lubrication",
+              "Speeds adjustment",
+              "Brakes adjustment",
+            ]}
+            slot="content"
+          />
+          </CourseScheduleBlock>
+
+        <CourseScheduleBlock
+          num="2"
+          title="Inner tube replacement"
+          price="10/15 gbp"
+          image={replaceTube}
+          align="reverse"
+        >
+          <List
+            items={[
+              "Replacing the tube with a new one is 15 gbp",
+              "Patching the tube is 10 gbp plus love from the Earth",     
+            ]}
+            slot="content"
+          />
+        </CourseScheduleBlock>
+
+        <CourseScheduleBlock
+          num="3"
+          title="Theft-proofing"
+          price="15 gbp + parts"
+          image={theftProofing}
+        >
+          <List
+            items={[
+              "Replace front and rear skewers with anti-theft ones",
+              "Replace saddle ring with anti-theft one",
+            ]}
+            slot="content"
+          />
+        </CourseScheduleBlock>
+
+        <CourseScheduleBlock
+          num="4"
+          title="Small fixes"
+          price="Price to be discussed"
+          image={smallFixes}
+          align="reverse"
+        >
+          <List
+            items={[
+              "Chain replacement",
+              "Cable replacement",
+              "Minor wheel truing",
+              "Accessory fitting",
+            ]}
+            slot="content"
+          />
+        </CourseScheduleBlock>
+      </div>
     </Section>
     
     <Section class="flex flex-col gap-24" id="pricing" type="narrow">
-      <Book
-        price="220 евро — Cтоимость курса"
-        buttonText="Book a service"
-      >
-        <List
-          items={[
-            "Cтандартное место (220 евро / 21.000 руб / 250 usd(t) / 920 шек)",
-            "Можно оплатить почти любым удобным переводом",
-            "Можно оплатить подвешенный курс для другого участника",
-            "На курсе есть одно бесплатное место",
-          ]}
-          slot="content"
-        />
-      </Book>
+      <Book buttonText="Book a service" />
     </Section>
     <Section id="faq" type="narrow">
       <FAQ
