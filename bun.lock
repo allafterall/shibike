@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "annashmitko-com",
+      "name": "shibike-co-uk",
       "dependencies": {
         "@astrojs/check": "^0.9.4",
         "@astrojs/tailwind": "^6.0.2",
