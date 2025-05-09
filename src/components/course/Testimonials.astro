@@ -19,16 +19,30 @@ const { title, items } = Astro.props;
   <Heading level="h2">{title}</Heading>
   <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
     {
-      items.map((item) => (
-        <blockquote class="p-6 bg-stone-800 rounded-lg shadow-md">
-          <p class="text-lg italic font-serif text-stone-300">
-            "{item.quote}"
-          </p>
-          <footer class="mt-4 text-sm text-stone-400">
-            - {item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer" class="hover:underline">{item.author}</a> : item.author}
-          </footer>
-        </blockquote>
-      ))
+      items.map((item) => {
+        const commonClasses = "p-6 bg-stone-800 rounded-lg shadow-md text-left"; // Added text-left for content within
+        const content = (
+          <>
+            <p class="text-lg italic font-serif text-stone-300">
+              "{item.quote}"
+            </p>
+            <footer class="mt-4 text-sm text-stone-400">- {item.author}</footer>
+          </>
+        );
+
+        return item.link ? (
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={`${commonClasses} block hover:bg-stone-700 transition-colors`}
+          >
+            {content}
+          </a>
+        ) : (
+          <blockquote class={commonClasses}>{content}</blockquote>
+        );
+      })
     }
   </div>
 </div>
