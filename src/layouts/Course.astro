@@ -89,6 +89,17 @@ const { title, description, meta } = Astro.props;
     background: var(--background-color);
   }
 
+  html {
+    scroll-behavior: smooth; /* Optional: for smooth scrolling */
+    scroll-padding-top: 3.5rem; /* 56px - Toolbar height on small screens */
+  }
+
+  @media (min-width: 768px) { /* Tailwind's md breakpoint */
+    html {
+      scroll-padding-top: 4rem; /* 64px - Toolbar height on md screens and up */
+    }
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
