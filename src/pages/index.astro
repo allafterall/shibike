@@ -191,5 +191,136 @@ import linaTImage from "./_images/lina_t.png";
         </div>
       </About>
     </Section>
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "MobileBusiness", // Or LocalBusiness if MobileBusiness isn't specific enough for your targeting
+            "name": "ShiBike - Mobile Bike Servicing",
+            "description": "Professional bike servicing in Central London at your home or workplace. Save time, ride smoothly.",
+            "image": new URL(servicingImage.src, Astro.site).href,
+            "url": Astro.url.href,
+            // "telephone": "+44XXXXXXXXXX", // Add your phone number
+            "email": "allafterall@gmail.com",
+            "areaServed": {
+              "@type": "Place",
+              "name": "Central London"
+            },
+            "priceRange": "£", // Or be more specific if possible
+            "makesOffer": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Basic servicing",
+                  "description": "Includes chain cleaning and lubrication, speeds adjustment, and brakes adjustment.",
+                  "provider": { "@id": Astro.url.href }, // Links to this business
+                  "areaServed": {
+                    "@type": "Place",
+                    "name": "Central London"
+                  }
+                },
+                "price": "50",
+                "priceCurrency": "GBP"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Inner tube replacement",
+                  "description": "Replacing the tube with a new one (15£) or patching the tube (10£).",
+                  "provider": { "@id": Astro.url.href },
+                  "areaServed": {
+                    "@type": "Place",
+                    "name": "Central London"
+                  }
+                }
+                // Price can be variable here, or list two separate services/offers
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Theft-proofing",
+                  "description": "Replace front and rear skewers with anti-theft ones, and replace seat post clamp with anti-theft one.",
+                  "provider": { "@id": Astro.url.href },
+                  "areaServed": {
+                    "@type": "Place",
+                    "name": "Central London"
+                  }
+                },
+                "price": "40",
+                "priceCurrency": "GBP"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Small fixes",
+                  "description": "Includes chain replacement, cable replacement, minor wheel truing, and accessory fitting. Price TBD.",
+                  "provider": { "@id": Astro.url.href },
+                  "areaServed": {
+                    "@type": "Place",
+                    "name": "Central London"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I know if my bike needs servicing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If you are regular rider it's probably a good idea to service your bike twice a year: once before the summer season and once before the winter one. But if you notice anything unusual—strange noises, poor braking, or shifting issues—it’s a good idea to get it checked sooner."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I contact you?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Feel free to drop me a message to allafterall@gmail.com"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does ShiBike mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The name is inspired by a Shiba Inu called Satomi who is a very sweet girl always keen to travel in a bike trailer"
+                }
+              }
+            ]
+          }
+          // Add Review schema for each testimonial
+          // Example for one testimonial:
+          // {
+          //   "@type": "Review",
+          //   "itemReviewed": {
+          //     "@id": Astro.url.href // Refers to the business
+          //   },
+          //   "author": {
+          //     "@type": "Person",
+          //     "name": "John T."
+          //   },
+          //   "reviewRating": {
+          //     "@type": "Rating",
+          //     "ratingValue": "5" // Assuming 5-star, adjust if you have actual ratings
+          //   },
+          //   "reviewBody": "Andrey did a great job servicing two of our bikes. They now ride like new! Would highly recommend! Thanks",
+          //   "publisher": { // Optional, but good
+          //     "@type": "Organization",
+          //     "name": "ShiBike"
+          //   }
+          // }
+          // Repeat for other testimonials
+        ]
+      }
+    </script>
   </main>
 </CourseLayout>
