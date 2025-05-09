@@ -67,7 +67,7 @@ const { title, description, meta } = Astro.props;
       noindex={meta.noindex || false}
     />
   </head>
-  <body>
+  <body class="bg-background text-text antialiased">
     <TagManagerNoScript id="GTM-KS2HB3VR" />
     <slot />
     <Footer />
@@ -79,14 +79,16 @@ const { title, description, meta } = Astro.props;
   /* @tailwind utilities; */
 
   :root {
-    --foreground-color: #e4dad7;
-    --background-color: #0d0402;
+    /* Updated to Shiba theme colors */
+    --foreground-color: #5C3A21; /* shiba-brown-dark */
+    --background-color: #FFF9E6; /* shiba-cream */
     --radius: 12px;
   }
 
   body {
-    color: var(--foreground-color);
-    background: var(--background-color);
+    /* Base color and background are now handled by Tailwind classes on the body tag */
+    /* You can keep these if you have other elements directly using these CSS vars, */
+    /* but for body, Tailwind classes are preferred. */
   }
 
   html {
@@ -106,16 +108,19 @@ const { title, description, meta } = Astro.props;
     height: 6px;
   }
 
+  /* Updated scrollbar colors for Shiba theme */
   ::-webkit-scrollbar-track {
-    background: rgba(228, 218, 215, 0.05);
+    /* Subtle track color, derived from shiba-brown-light */
+    background: rgba(166, 123, 91, 0.1); 
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(228, 218, 215, 0.2);
+    /* Thumb color using shiba-brown-light */
+    background: rgba(166, 123, 91, 0.4);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(228, 218, 215, 0.3);
+    background: rgba(166, 123, 91, 0.6);
   }
 </style>

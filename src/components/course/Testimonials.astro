@@ -24,7 +24,7 @@ const { title, items } = Astro.props;
     {
       items.map((item) => {
         const commonClasses =
-          "p-6 bg-stone-800 rounded-lg shadow-md text-left flex flex-col"; // Added flex flex-col
+          "p-6 bg-shiba-brown-dark rounded-lg shadow-md text-left flex flex-col";
         const testimonialContent = (
           <>
             {item.image && (
@@ -32,16 +32,16 @@ const { title, items } = Astro.props;
                 <Image
                   src={item.image}
                   alt={item.imageAlt || `Photo of ${item.author}`}
-                  class="w-20 h-20 rounded-full object-cover border-2 border-stone-700"
+                  class="w-20 h-20 rounded-full object-cover border-2 border-shiba-brown-light"
                   width={80}
                   height={80}
                 />
               </div>
             )}
-            <p class="text-lg italic font-serif text-stone-300">
+            <p class="text-lg italic font-serif text-shiba-text-on-dark">
               "{item.quote}"
             </p>
-            <footer class="mt-4 text-sm text-stone-400 text-right">
+            <footer class="mt-4 text-sm text-shiba-brown-light text-right">
               - {item.author}
             </footer>
           </>
@@ -52,7 +52,7 @@ const { title, items } = Astro.props;
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            class={`${commonClasses} hover:bg-stone-700 transition-colors`}
+            class={`${commonClasses} hover:bg-shiba-brown-dark/80 transition-colors`}
           >{testimonialContent}</a>
         ) : (
           <blockquote class={commonClasses}>{testimonialContent}</blockquote>

@@ -18,21 +18,31 @@ export default {
 				serif: ["Roboto Serif Variable", "Roboto Serif", ...defaultTheme.fontFamily.serif],
 			},
 			colors: {
+				// Shiba Inu Palette
+				'shiba-cream': '#FFF9E6',        // For main backgrounds (light, warm off-white)
+				'shiba-red': '#D95B43',          // For primary actions, accents (burnt orange/red)
+				'shiba-brown-dark': '#5C3A21',   // For main text, dark UI elements (rich, dark brown)
+				'shiba-brown-light': '#A67B5B',  // For secondary text, borders (lighter, warm brown)
+
+				// Update existing semantic colors to use the Shiba palette
 				primary: {
-					DEFAULT: "#ff5733",
+					DEFAULT: "#D95B43", // Using shiba-red
 				},
 				background: {
-					DEFAULT: "#0d0402",
+					DEFAULT: "#FFF9E6", // Using shiba-cream
 				},
 				text: {
-					DEFAULT: "#e4dad7",
-					muted: "#b69791",
-					primary: "#FF5733",
+					DEFAULT: "#5C3A21", // Using shiba-brown-dark
+					muted: "#A67B5B",   // Using shiba-brown-light
+					primary: "#D95B43", // Using shiba-red for text on primary elements if needed
 				},
-				accent: {
+				// Your existing accent colors - you might want to theme these too eventually
+				"custom-accent": { // Renamed to avoid conflict with HSL accent below
 					purple: "#9b80f4",
 					pink: "#ffc8bd",
 				},
+				// These colors below are defined using CSS variables, which is great for theming.
+				// You'd update those CSS variables in your global CSS file to match the Shiba theme.
 				card: {
 					DEFAULT: "hsl(var(--card))",
 					foreground: "hsl(var(--card-foreground))",
@@ -113,4 +123,4 @@ export default {
 	plugins: [
 		require('@tailwindcss/typography'),
 	],
-}
+};

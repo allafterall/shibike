@@ -20,12 +20,12 @@ const {
 } = Astro.props;
 
 const baseStyles =
-  "inline-flex items-center justify-center font-medium rounded-sm transition-colors text-black";
+  "inline-flex items-center justify-center font-medium rounded-sm transition-colors"; // Removed text-black
 
 const variantStyles = {
-  primary: "bg-primary hover:bg-primary/80",
-  secondary: "bg-gray-800 hover:bg-gray-900",
-  outline: "border border-gray-800 text-gray-800 hover:bg-gray-100",
+  primary: "bg-primary hover:bg-primary/90 text-shiba-text-on-dark", // Assumes 'primary' in Tailwind is now shiba-red. text-shiba-text-on-dark is like shiba-cream.
+  secondary: "bg-shiba-brown-dark hover:bg-shiba-brown-dark/90 text-shiba-text-on-dark",
+  outline: "border border-shiba-brown-light text-shiba-brown-light hover:bg-primary/20 hover:text-primary", // Uses primary (shiba-red) for hover accent
 };
 
 const sizeStyles = {
