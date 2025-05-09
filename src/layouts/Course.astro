@@ -11,9 +11,7 @@ import coverImage from "./_images/bike_servicing.jpg";
 interface Props {
   title: string;
   description: string;
-  meta: {
-    title: string;
-    description: string;
+  meta?: { // Meta is now optional and only carries distinct values
     noindex?: boolean;
   };
 }
@@ -40,31 +38,31 @@ const { title, description, meta } = Astro.props;
       twitter={{
         card: "summary_large_image",
         creator: "@allafterall",
-        description: meta.description || description,
-        title: meta.title || title,
+        description: description,
+        title: title,
         image: coverImage.src,
-        imageAlt: meta.title || title,
+        imageAlt: title,
         site: "https://shibike.co.uk",
       }}
       openGraph={{
         basic: {
-          title: meta.title || title,
+          title: title,
           type: "website",
           image: coverImage.src,
         },
         optional: {
-          description: meta.description || description,
+          description: description,
           siteName: "ShiBike",
           locale: "en",
         },
         image: {
-          alt: meta.title || title,
+          alt: title,
           height: coverImage.height,
           width: coverImage.width,
           url: coverImage.src,
         },
       }}
-      noindex={meta.noindex || false}
+      noindex={meta?.noindex || false}
     />
   </head>
   <body class="bg-background text-text antialiased">
@@ -74,21 +72,13 @@ const { title, description, meta } = Astro.props;
   </body>
 </html>
 <style is:global>
-  /* @tailwind base; */
-  /* @tailwind components; */
-  /* @tailwind utilities; */
-
   :root {
-    /* Updated to Shiba theme colors */
-    --foreground-color: #5C3A21; /* shiba-brown-dark */
-    --background-color: #FFF9E6; /* shiba-cream */
-    --radius: 12px;
-  }
-
-  body {
     /* Base color and background are now handled by Tailwind classes on the body tag */
     /* You can keep these if you have other elements directly using these CSS vars, */
     /* but for body, Tailwind classes are preferred. */
+    /* --foreground-color: #5C3A21; /* shiba-brown-dark (Example, if needed elsewhere) */
+    /* --background-color: #FFF9E6; /* shiba-cream (Example, if needed elsewhere) */
+    /* --radius: 12px; (Example, if needed elsewhere) */
   }
 
   html {
