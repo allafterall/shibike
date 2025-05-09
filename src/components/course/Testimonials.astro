@@ -1,10 +1,13 @@
 ---
+import { Image } from "astro:assets";
 import Heading from "./Heading.astro";
 
 interface TestimonialItem {
   quote: string;
   author: string;
   link?: string;
+  image?: ImageMetadata; // Or string if you prefer direct paths and not using Astro's Image optimization
+  imageAlt?: string;
 }
 
 interface Props {
@@ -20,13 +23,27 @@ const { title, items } = Astro.props;
   <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
     {
       items.map((item) => {
-        const commonClasses = "p-6 bg-stone-800 rounded-lg shadow-md text-left"; // Added text-left for content within
-        const content = (
+        const commonClasses =
+          "p-6 bg-stone-800 rounded-lg shadow-md text-left flex flex-col"; // Added flex flex-col
+        const testimonialContent = (
           <>
+            {item.image && (
+              <div class="flex justify-center mb-4">
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt || `Photo of ${item.author}`}
+                  class="w-20 h-20 rounded-full object-cover border-2 border-stone-700"
+                  width={80}
+                  height={80}
+                />
+              </div>
+            )}
             <p class="text-lg italic font-serif text-stone-300">
               "{item.quote}"
             </p>
-            <footer class="mt-4 text-sm text-stone-400">- {item.author}</footer>
+            <footer class="mt-4 text-sm text-stone-400 text-right">
+              - {item.author}
+            </footer>
           </>
         );
 
@@ -35,12 +52,10 @@ const { title, items } = Astro.props;
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            class={`${commonClasses} block hover:bg-stone-700 transition-colors`}
-          >
-            {content}
-          </a>
+            class={`${commonClasses} hover:bg-stone-700 transition-colors`}
+          >{testimonialContent}</a>
         ) : (
-          <blockquote class={commonClasses}>{content}</blockquote>
+          <blockquote class={commonClasses}>{testimonialContent}</blockquote>
         );
       })
     }
