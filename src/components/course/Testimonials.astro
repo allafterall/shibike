@@ -4,6 +4,7 @@ import Heading from "./Heading.astro";
 interface TestimonialItem {
   quote: string;
   author: string;
+  link?: string;
 }
 
 interface Props {
@@ -20,8 +21,12 @@ const { title, items } = Astro.props;
     {
       items.map((item) => (
         <blockquote class="p-6 bg-stone-800 rounded-lg shadow-md">
-          <p class="text-lg italic font-serif text-stone-300">"{item.quote}"</p>
-          <footer class="mt-4 text-sm text-stone-400">- {item.author}</footer>
+          <p class="text-lg italic font-serif text-stone-300">
+            "{item.quote}"
+          </p>
+          <footer class="mt-4 text-sm text-stone-400">
+            - {item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer" class="hover:underline">{item.author}</a> : item.author}
+          </footer>
         </blockquote>
       ))
     }
