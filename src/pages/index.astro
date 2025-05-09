@@ -9,6 +9,7 @@ import List from "../components/course/List.astro";
 import Book from "../components/course/Book.astro";
 import Section from "../components/course/Section.astro";
 import Toolbar from "../components/course/Toolbar.astro";
+import Testimonials from "../components/course/Testimonials.astro"; // <-- Import the new component
 import CourseLayout from "../layouts/Course.astro";
 import basicServicing from "./_images/basic_servicing.png";
 import replaceTube from "./_images/replace_tube.png";
@@ -92,7 +93,7 @@ import servicingImage from "./_images/bike_servicing.jpg";
         </CourseScheduleBlock>
 
         <CourseScheduleBlock
-          title="Small fixes (price TBD)"
+          title="Small fixes (price )"
           image={smallFixes}
           align="reverse"
         >
@@ -109,7 +110,29 @@ import servicingImage from "./_images/bike_servicing.jpg";
         <Book buttonText="Book a service" />
       </div>
     </Section>
-    
+
+    <Section id="testimonials" class="my-24">
+      <Testimonials
+        title="What Customers Say"
+        items={[
+          {
+            quote:
+              "Andrey did a great job servicing two of our bikes. They now ride like new! Would highly recommend! Thanks",
+            author: "John T.",
+          },
+          {
+            quote:
+              "Andrey is a true professional—he did a great job maintaining my bike. Everything runs smoothly now, and I couldn’t be happier with the result!",
+            author: "Maksim K.",
+          },
+          {
+            quote: "Andrey was superb. Sorted my bike problem and even offered to degrease and grease my bike chain as an extra, so pleased with the work! Thank you! :)",
+            author: "Nimesh W."
+          }
+        ]}
+      />
+    </Section>
+
     <Section id="faq" type="narrow">
       <FAQ
         title="FAQ"
