@@ -19,9 +19,9 @@ const { title, items } = Astro.props;
     <Heading level="h2" class="mb-12">{title}</Heading>
     <div class="space-y-6">
       {
-        items.map((item: FAQItem) => (
-          <details class="group border-b border-neutral-800 pb-6">
-            <summary class="flex cursor-pointer items-center justify-between py-2 text-xl font-medium text-white">
+        items.map((item) => (
+          <details class="group border-b border-shiba-brown-light pb-6">
+            <summary class="flex cursor-pointer items-center justify-between py-2 text-xl font-medium text-shiba-brown-dark">
               {item.question}
               <svg
                 class="h-5 w-5 transform transition-transform duration-300 group-open:rotate-180"
@@ -38,7 +38,7 @@ const { title, items } = Astro.props;
                 />
               </svg>
             </summary>
-            <div class="mt-4 text-neutral-300">
+            <div class="mt-4 text-shiba-brown-light">
               <p>{item.answer}</p>
             </div>
           </details>
