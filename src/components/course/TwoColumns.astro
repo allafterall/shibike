@@ -9,17 +9,24 @@ const { align = "default", class: className, ...props } = Astro.props;
 ---
 
 <section class="mx-auto" class:list={[className]} {...props}>
-  <div class:list={["grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16"]}>
+  <div class:list={["grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center"]}>
+
     <!-- Left column with image -->
     <div
-      class:list={[align === "default" ? "md:order-first" : "md:order-last"]}
+      class:list={[
+          "flex justify-center items-center",
+          align === "default" ? "md:order-first" : "md:order-last"
+        ]}
     >
       <slot name="left" />
     </div>
 
     <!-- Right column with content -->
     <div
-      class:list={[align === "default" ? "md:order-last" : "md:order-first"]}
+      class:list={[
+          "flex justify-center items-center",
+          align === "default" ? "md:order-last" : "md:order-first"
+        ]}
     >
       <slot name="right" />
     </div>
