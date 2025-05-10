@@ -8,7 +8,7 @@ interface Props extends HTMLAttributes<"section"> {
 const { align = "default", class: className, ...props } = Astro.props;
 ---
 
-<section class="mx-auto" class:list={[className]} {...props}>
+<section class:list={["mx-auto max-w-3xl", className]} {...props}>
   <div class:list={["grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center"]}>
 
     <!-- Left column with image -->
