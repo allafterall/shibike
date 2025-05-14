@@ -7,3 +7,4 @@ To run locally:
 npm install astro
 npm run dev
 ```
+Track activity: https://clarity.microsoft.com/projects/view/rjc4nhl0i7/impressions?date=Last%203%20days
