@@ -7,6 +7,8 @@ To run locally:
 npm install astro
 npm run dev
 ```
-Track activity: https://clarity.microsoft.com/projects/view/rjc4nhl0i7/impressions?date=Last%203%20days
+Microsoft Clarity: https://clarity.microsoft.com/projects/view/rjc4nhl0i7/impressions?date=Last%203%20days
 
-Google analytics: https://analytics.google.com/analytics/web/#/p489258372/reports/intelligenthome
+Google Analytics: https://analytics.google.com/analytics/web/#/p489258372/reports/intelligenthome
+
+Google Search Console: https://search.google.com/search-console?resource_id=sc-domain%3Ashibike.co.uk
