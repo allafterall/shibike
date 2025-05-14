@@ -30,4 +30,14 @@ import Button from "../components/course/Button.astro";
       </div>
     </Section>
   </main>
+  <script is:inline>
+    // Ensure gtag is available before calling it
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17076537009/sbhGCL-OjscaELGN3c4_',
+      });
+    } else {
+      console.warn('Google Ads gtag function not found. Conversion event not sent.');
+    }
+  </script>
 </CourseLayout>
