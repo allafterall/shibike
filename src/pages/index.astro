@@ -20,6 +20,7 @@ import maksimKImage from "./_images/maksim_k.png";
 import nimeshWImage from "./_images/nimesh_w.png"; 
 import linaTImage from "./_images/lina_t.png";
 const imageUrl = new URL(servicingImage.src, Astro.site).href;
+const pageUrl = Astro.url.href;
 ---
 
 <CourseLayout
@@ -200,14 +201,14 @@ const imageUrl = new URL(servicingImage.src, Astro.site).href;
             "name": "ShiBike - Mobile Bike Servicing",
             "description": "Professional bike servicing in Central London at your home or workplace. Save time, ride smoothly.",
             "image": "${imageUrl}",
-            "url": Astro.url.href,
+            "url": "${pageUrl}",
             // "telephone": "+44XXXXXXXXXX", // Add your phone number
             "email": "allafterall@gmail.com",
             "areaServed": {
               "@type": "Place",
               "name": "Central London"
             },
-            "priceRange": "£", // Or be more specific if possible
+            "priceRange": "£45", // Or be more specific if possible
             "makesOffer": [
               {
                 "@type": "Offer",
@@ -215,7 +216,7 @@ const imageUrl = new URL(servicingImage.src, Astro.site).href;
                   "@type": "Service",
                   "name": "Basic servicing",
                   "description": "Includes chain cleaning and lubrication, speeds adjustment, and brakes adjustment.",
-                  "provider": { "@id": Astro.url.href }, // Links to this business
+                  "provider": { "@id": "${pageUrl}" }, // Links to this business
                   "areaServed": {
                     "@type": "Place",
                     "name": "Central London"
@@ -230,7 +231,7 @@ const imageUrl = new URL(servicingImage.src, Astro.site).href;
                   "@type": "Service",
                   "name": "Inner tube replacement",
                   "description": "Replacing the tube with a new one (15£) or patching the tube (10£).",
-                  "provider": { "@id": Astro.url.href },
+                  "provider": { "@id": "${pageUrl}" },
                   "areaServed": {
                     "@type": "Place",
                     "name": "Central London"
@@ -244,7 +245,7 @@ const imageUrl = new URL(servicingImage.src, Astro.site).href;
                   "@type": "Service",
                   "name": "Theft-proofing",
                   "description": "Replace front and rear skewers with anti-theft ones, and replace seat post clamp with anti-theft one.",
-                  "provider": { "@id": Astro.url.href },
+                  "provider": { "@id": "${pageUrl}" },
                   "areaServed": {
                     "@type": "Place",
                     "name": "Central London"
@@ -259,7 +260,7 @@ const imageUrl = new URL(servicingImage.src, Astro.site).href;
                   "@type": "Service",
                   "name": "Small fixes",
                   "description": "Includes chain replacement, cable replacement, minor wheel truing, and accessory fitting. Price TBD.",
-                  "provider": { "@id": Astro.url.href },
+                  "provider": { "@id": "${pageUrl}" },
                   "areaServed": {
                     "@type": "Place",
                     "name": "Central London"
@@ -302,7 +303,7 @@ const imageUrl = new URL(servicingImage.src, Astro.site).href;
           // {
           //   "@type": "Review",
           //   "itemReviewed": {
-          //     "@id": Astro.url.href // Refers to the business
+          //     "@id": "${pageUrl}" // Refers to the business
           //   },
           //   "author": {
           //     "@type": "Person",
