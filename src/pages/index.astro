@@ -19,6 +19,7 @@ import johnTImage from "./_images/john_t.png";
 import maksimKImage from "./_images/maksim_k.png"; 
 import nimeshWImage from "./_images/nimesh_w.png"; 
 import linaTImage from "./_images/lina_t.png";
+const imageUrl = new URL(servicingImage.src, Astro.site).href;
 ---
 
 <CourseLayout
@@ -198,7 +199,7 @@ import linaTImage from "./_images/lina_t.png";
             "@type": "MobileBusiness", // Or LocalBusiness if MobileBusiness isn't specific enough for your targeting
             "name": "ShiBike - Mobile Bike Servicing",
             "description": "Professional bike servicing in Central London at your home or workplace. Save time, ride smoothly.",
-            "image": new URL(servicingImage.src, Astro.site).href,
+            "image": "${imageUrl}",
             "url": Astro.url.href,
             // "telephone": "+44XXXXXXXXXX", // Add your phone number
             "email": "allafterall@gmail.com",
