@@ -1,0 +1,36 @@
+---
+// src/components/GoogleMapEmbed.astro
+interface Props {
+  /** The full embed URL copied from Google Maps */
+  embedUrl: string;
+  /** Accessible title for the iframe */
+  title?: string;
+  /** Width of the map (e.g., "100%", "600px") */
+  width?: string;
+  /** Height of the map (e.g., "450px") */
+  height?: string;
+  /** Additional CSS classes for the container div */
+  class?: string;
+}
+
+const {
+  embedUrl,
+  title = "Interactive Google Map", // Default title
+  width = "100%", // Default to responsive width
+  height = "450px", // Default height
+  class: className,
+} = Astro.props;
+---
+
+<div class:list={["map-embed-container", className]}>
+  <iframe
+    src={embedUrl}
+    width={width}
+    height={height}
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title={title}
+  ></iframe>
+</div>
