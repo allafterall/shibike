@@ -38,7 +38,7 @@ const pageUrl = Astro.url.href;
       >
         <p>
           Hi, my name is Andrey. I used to work as a software engineer, but over time I realized I get much more satisfaction from working with real, tangible things. 
-          As a passionate cyclist, bike servicing turned out to be the perfect fit. I love the process of bringing bikes back to their best.</p>
+          As a passionate cyclist, bike servicing turned out to be the perfect fit.</p>
         <p>
           It’s incredibly rewarding for me to see how much of a difference a well-tuned bike can make to someone's ride.
         </p>
@@ -299,28 +299,6 @@ const pageUrl = Astro.url.href;
               }
             ]
           }
-          // Add Review schema for each testimonial
-          // Example for one testimonial:
-          // {
-          //   "@type": "Review",
-          //   "itemReviewed": {
-          //     "@id": "${pageUrl}" // Refers to the business
-          //   },
-          //   "author": {
-          //     "@type": "Person",
-          //     "name": "John T."
-          //   },
-          //   "reviewRating": {
-          //     "@type": "Rating",
-          //     "ratingValue": "5" // Assuming 5-star, adjust if you have actual ratings
-          //   },
-          //   "reviewBody": "Andrey did a great job servicing two of our bikes. They now ride like new! Would highly recommend! Thanks",
-          //   "publisher": { // Optional, but good
-          //     "@type": "Organization",
-          //     "name": "ShiBike"
-          //   }
-          // }
-          // Repeat for other testimonials
         ]
       }
     </script>
