@@ -8,6 +8,7 @@ interface TestimonialItem {
   link?: string;
   image?: ImageMetadata; // Or string if you prefer direct paths and not using Astro's Image optimization
   imageAlt?: string;
+  stars?: number; // Added new parameter for star rating
 }
 
 interface Props {
@@ -36,6 +37,14 @@ const { title, items } = Astro.props;
                   width={80}
                   height={80}
                 />
+              </div>
+            )}
+            {/* Display Stars */}
+            {typeof item.stars === "number" && item.stars > 0 && (
+              <div class="flex justify-center mb-3">
+                {Array.from({ length: Math.min(item.stars, 5) }).map( // Cap at 5 stars, render item.stars
+                  (_, i) => <span class="text-yellow-400 text-xl mx-0.5">⭐</span>
+                )}
               </div>
             )}
             <p class="text-lg italic font-serif text-background">
