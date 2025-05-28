@@ -19,7 +19,7 @@ import servicingImage from "./_images/bike_servicing.jpg";
 import johnTImage from "./_images/john_t.png"; 
 import maksimKImage from "./_images/maksim_k.png"; 
 import nimeshWImage from "./_images/nimesh_w.png"; 
-import linaTImage from "./_images/lina_t.png";
+import polinaVImage from "./_images/polina_v.png";
 const imageUrl = new URL(servicingImage.src, Astro.site).href;
 // Moved Google Maps constants here from Testimonials.astro
 const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39717.67735579412!2d-0.16587221557771906!3d51.52505133729184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x222d7c4f2ec9d22d%3A0x6677353ef1e0b237!2sShiBike!5e0!3m2!1sen!2suk!4v1748450785298!5m2!1sen!2suk";
@@ -123,7 +123,7 @@ const pageUrl = Astro.url.href;
             quote:
               "Andrey did a great job servicing two of our bikes. They now ride like new! Would highly recommend! Thanks",
             author: "John T.",
-            link: "https://www.airtasker.com/users/648201673dff-p-32582018/",
+            link: "https://maps.app.goo.gl/j9EmA16mXLvgqDwf9",
             image: johnTImage,
             imageAlt: "Photo of John T.",
             stars: 5,
@@ -132,7 +132,7 @@ const pageUrl = Astro.url.href;
             quote:
               "Andrey is a true professional—he did a great job maintaining my bike. Everything runs smoothly now, and I couldn’t be happier with the result!",
             author: "Maksim K.",
-            link: "https://www.airtasker.com/users/648201673dff-p-32582018/",
+            link: "https://maps.app.goo.gl/aoMvioxdgyThf2EA6",
             image: maksimKImage,
             imageAlt: "Photo of Maksim K.",
             stars: 5,
@@ -148,10 +148,11 @@ const pageUrl = Astro.url.href;
           },
           {
             quote:
-              "My bike has been super smooth to ride this week, actually went all across to deep West London, thanks a lot for the service!",
-            author: "Lina T.",
-            image: linaTImage,
-            imageAlt: "Photo of Lina T.",
+              "Very convenient service, and the bike rides like a new one!",
+            author: "Polina V.",
+            link: "https://maps.app.goo.gl/Fm36JVNKvzjX7kp1A",
+            image: polinaVImage,
+            imageAlt: "Photo of Polina V.",
             stars: 5,
           },
         ]}
