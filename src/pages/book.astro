@@ -19,15 +19,35 @@ import CourseLayout from "../layouts/Course.astro";
         >Book mobile bike servicing</Heading
       >
 
-      <Text class="md:text-center mb-4">
+      <!-- Temporary pause notice -->
+      <div class="max-w-3xl mx-auto mb-8 p-6 bg-yellow-50 border-2 border-yellow-400 rounded-lg">
+        <h2 class="text-2xl font-bold text-yellow-900 mb-3 text-center">
+          ⚠️ Temporarily Not Taking Orders
+        </h2>
+        <p class="text-yellow-800 text-center text-lg">
+          We're currently not accepting new bookings, please check back later.
+        </p>
+      </div>
+
+      <Text class="md:text-center mb-4 opacity-50">
         Please fill out the form below
       </Text>
       
-      <div class="max-w-3xl mx-auto">
-        <TallyForm
-          id="3XgRjL"
-          title="Book mobile bike servicing"
-        />
+      <!-- Disabled form wrapper -->
+      <div class="max-w-3xl mx-auto relative">
+        <!-- Overlay to make form non-interactive -->
+        <div class="absolute inset-0 bg-gray-200 bg-opacity-70 z-10 cursor-not-allowed rounded-lg flex items-center justify-center">
+          <p class="text-gray-700 font-semibold text-xl bg-white px-6 py-3 rounded-lg shadow-lg">
+            Booking Currently Unavailable
+          </p>
+        </div>
+        
+        <div class="opacity-40 pointer-events-none">
+          <TallyForm
+            id="3XgRjL"
+            title="Book mobile bike servicing"
+          />
+        </div>
       </div>
     </Section>
   </main>
